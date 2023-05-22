@@ -1,25 +1,24 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
-export const ContactSchema = new Schema({
-    firstName: {
+export const UniversitySchema = new Schema({
+    name: {
         type: String,
-        required: "Enter a first name",
+        required: "Enter Name",
     },
-    lastName: {
+    country: {
         type: String,
-        required: "Enter a last name",
+        required: "Enter country",
     },
-    email: {
+    alpha_two_code: {
         type: String,
+        required: "Enter alpha_two_code",
     },
-    company: {
+    web_pages: {
+        type: Array,
+        required: "Enter web_pages",
+    },
+    domains: {
         type: String,
+        required: "Enter domains",
     },
-    phone: {
-        type: Number,
-    },
-    created_date: {
-        type: Date,
-        default: Date.now,
-    },
-})
+}, { timestamps: true })

@@ -1,12 +1,9 @@
-import { addNewContact, getContacts, getContactWithId } from '../controllers/crm.Controllers';
+import { addUniversity, getUniversities, searchUniversityViaCountry } from '../controllers/crm.Controllers';
 const routes = (app) => {
-    app.route('/contact')
-        .get(getContacts)
-        .post(addNewContact);
-    app.route('/contact/:contactId')
-        .get(getContactWithId)
-        .put()
-        .delete((req, res) =>
-            res.send('DELETE request successful!'));
+    app.route('/universities')
+        .get(getUniversities)
+        .post(addUniversity);
+    app.route('/universities/:country')
+        .get(searchUniversityViaCountry)
 }
 export default routes;

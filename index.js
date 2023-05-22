@@ -28,9 +28,8 @@ app.use(bodyParser.json());
 routes(app);
 
 app.get("/", (req, res) => {
-    res.send("Hello😁 Welcome to my REST-API-NEW!");
+    res.send("Hello😁 Welcome University API!");
 })
-
 
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
